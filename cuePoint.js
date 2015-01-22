@@ -40,15 +40,9 @@
 			$(this).removeClass(options.inactive);
 		});
 		
-		// Hover 
-		$(div + " div").hover(
-			function () {$(this).addClass("__hovered");}, 			// ON
-			function () {$(this).removeClass("__hovered");}			// OFF
-		);
-		
 		// Highlight current card 
 		video.ontimeupdate = function () {
-			$(div + " div").not (".__hovered").each (function () {
+			$(div + " div").not ("."+options.hover).each (function () {
 				if (video.currentTime >= timeToSeconds ($(this).data("time")) ) {
 					$(this).addClass (options.active);
 					$(this).removeClass (options.inactive);
@@ -58,6 +52,12 @@
 				}
 			});
 		} 
+		
+		// Hover 
+		$(div + " div").hover(
+			function () {$(this).addClass(options.hover);}, 			// ON
+			function () {$(this).removeClass(options.hover);}			// OFF
+		);
 	}
 }(jQuery));
 
