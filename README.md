@@ -18,7 +18,15 @@ http://iamjohnbrown.com/cuepoint.php
 <div id="cueCards"></div>
 ```
 
-**3. Call cuePoint(card_container, options) on the video element.**
+**3. Add jQuery and CuePointJS in the head of your page.**
+```
+<head>
+  <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+  <script src="cuePoint.js"></script>
+</head>
+```
+
+**4. Call cuePoint(card_container, options) on the video element.**
 ```
 var options = [
   points : [
@@ -39,7 +47,9 @@ var options = [
   
 ];
 
-$("#myVideo").cuePoint ("#cueCards", options);
+$ (function () {
+  $("#myVideo").cuePoint ("#cueCards", options);
+});
 ```
 
 **Options**
