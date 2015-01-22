@@ -1,6 +1,9 @@
 # CuePointJS
 HTML5 video cue point creator.
 
+## See it in action
+http://iamjohnbrown.com/cuepoint.php
+
 ## Use
 **1. Add an HTML5 video element to your page.**
 ```
