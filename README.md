@@ -70,3 +70,16 @@ Cue points will be dynamically created as divs and appended to your card contain
 ```
 #cueCards div {border:1px solid #333; border-radius:3px; padding:15px;}
 ````
+
+## Quirks
+To prevent your hover styling from being overridden by other styles:
+- Place your hover style **after** the active and inactive styles.
+```
+.active { color:red; }
+.inactive { color:#333; }
+.hover { color:green; }
+```
+- Or add **!important** after your hover values.
+```
+.hover { color:green !important;  }
+```
