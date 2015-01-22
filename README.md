@@ -13,7 +13,7 @@ http://iamjohnbrown.com/cuepoint.php
 </video>
 ```
 
-**2. Add an empty block element to your page.**
+**2. Add an empty block element to your page. This will hold the dynamically created cue cards.**
 ``` 
 <div id="cueCards"></div>
 ```
@@ -51,6 +51,9 @@ $ (function () {
   $("#myVideo").cuePoint ("#cueCards", options);
 });
 ```
+
+**Card Container**
+- An empty block element that will hold dynamically created cue cards.
 
 **Options**
 - points : **(object[ ])**
